@@ -29,6 +29,8 @@ app.use("/area",areaRoutes) //http://localhost:3000/area/add
 const hordingRoutes = require("./src/routes/HordingRoutes")
 app.use("/hording",hordingRoutes) //http://localhost:3000/hording/add
 
+const propertyRoutes = require("./src/routes/PropertyRoutes")
+app.use("/property",propertyRoutes) //http://localhost:3001/area/addproperty
 
 mongoose.connect("mongodb://localhost:27017/25_node_internship_20").then(()=>{
     console.log("database connected....")
