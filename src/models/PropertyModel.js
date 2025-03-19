@@ -13,6 +13,17 @@ const propertySchema = new Schema({
         type:Schema.Types.ObjectId,
         ref:"State",
     },
+
+    availableRooms: {
+        type: Number, // ✅ Add this field
+        default: 0, // Optional: Default value if not provided
+      },
+
+    price: {
+        type: Number, // ✅ Add this field
+        // Optional: Ensure price is always provided
+      },
+
     cityId:{
         type:Schema.Types.ObjectId,
         ref:"City",
