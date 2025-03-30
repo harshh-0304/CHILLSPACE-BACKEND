@@ -25,6 +25,7 @@ const addPropertyWithFile = async (req, res) => {
       const cloundinaryResponse = await cloudinaryUtil.uploadFileToCloudinary(req.file);
       console.log(cloundinaryResponse);
       console.log(req.body);
+      
 
       //store data in database
       req.body.propertyURL = cloundinaryResponse.secure_url;
